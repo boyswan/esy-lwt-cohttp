@@ -1,0 +1,40 @@
+{
+  "name": "ui-tools",
+  "version": "0.1.0",
+  "description": "Example Reason Esy Project",
+  "license": "MIT",
+  "esy": {
+    "build": "refmterr dune build -p #{self.name}",
+    "release": {
+      "bin": [
+        "Main.exe"
+      ],
+      "deleteFromBinaryRelease": [
+        "*esy_ocaml_*",
+        "ocaml-*"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "esy x Main.exe",
+    "doc": "esy dune build @doc"
+  },
+  "dependencies": {
+    "@esy-ocaml/reason": ">= 3.4.0 < 3.5.0",
+    "@opam/cohttp": "2.0.0",
+    "@opam/cohttp-lwt-unix": "2.0.0",
+    "@opam/dune": "*",
+    "@opam/lwt": "*",
+    "@opam/lwt_ppx": "*",
+    "ocaml": "~4.6.0",
+    "refmterr": "*"
+  },
+  "resolutions": {
+    "@opam/sexplib": "v0.11.0"
+  },
+  "devDependencies": {
+    "@opam/merlin": "*",
+    "ocaml": "~4.6.0",
+    "@opam/odoc": "*"
+  }
+}
