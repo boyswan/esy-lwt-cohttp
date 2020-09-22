@@ -1,7 +1,7 @@
 open Cohttp;
 open Cohttp_lwt_unix;
 
-let url = "http://jackboyce.co.uk/";
+let url = "http://google.com/";
 
 let request = {
   let%lwt (_resp, body) = Client.get(Uri.of_string(url));
